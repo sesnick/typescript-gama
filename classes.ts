@@ -8,8 +8,14 @@ class Carro {
     ){}
     
     private alterarVelocidade(delta:number){
-        //VALIDAÇÕES DE ACELERAÇÃO E FRENAGEM
-        //this.velocAtual =xxx
+        const novaVelocidade = this.velocAtual + delta;
+
+        if(novaVelocidade >= 0 && novaVelocidade <= this.velocMax)
+        {
+            this.velocAtual +novaVelocidade;
+        }else{
+            this.velocAtual = delta > 0? this.velocMax : 0
+        }
     }
     acelerar(){
         this.alterarVelocidade(5);
