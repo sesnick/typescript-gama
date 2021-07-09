@@ -7,17 +7,16 @@ class Carro {
         private velocMax: number =220 // nao pode ser alterado depois da instancia
     ){}
     
-    
+    private alterarVelocidade(delta:number){
+        //VALIDAÇÕES DE ACELERAÇÃO E FRENAGEM
+        //this.velocAtual =xxx
+    }
     acelerar(){
-        const aceleracao = 5;
-        if(this.velocAtual  + aceleracao <= this.velocMax){
-        this.velocAtual += aceleracao;
-        }
+        this.alterarVelocidade(5);
     }
 
     frear(){
-        const frenagem =5;
-        this.velocAtual -= frenagem;
+        this.alterarVelocidade(-5);
     }
 }
 
