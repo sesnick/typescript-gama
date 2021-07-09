@@ -28,3 +28,21 @@ class Carro {
 
 const carro = new Carro ('ford', 'ka',250);
 carro.acelerar();
+
+//Herança
+
+class Camaro extends Carro{
+    private turbo =false;
+
+    constructor(){
+        super('Chevrolet','camaro',500);
+    }
+    ligarTurbo(){
+        this.turbo =true;
+    }
+}
+
+const camaro = new Camaro();
+camaro.acelerar();
+camaro.frear();
+camaro.ligarTurbo();
